@@ -30,15 +30,15 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         echo "Version: $VERSION"
-    - name: Build Docker Image
-      env:
-        VERSION: ${{steps.semantic_version.outputs.version}}
-      run: |
-        docker build -t smartiumtech/docker-graphql:$VERSION .
-        docker build -t smartiumtech/docker-graphql:latest .
-    - name: Push Docker Image
-      env:
-        VERSION: ${{steps.semantic_version.outputs.version}}
-      run: |
-        docker push smartiumtech/docker-graphql:$VERSION
-        docker push smartiumtech/docker-graphql:latest
+    # - name: Build Docker Image
+    #   env:
+    #     VERSION: ${{steps.semantic_version.outputs.version}}
+    #   run: |
+    #     docker build -t smartiumtech/docker-graphql:$VERSION .
+    #     docker build -t smartiumtech/docker-graphql:latest .
+    # - name: Push Docker Image
+    #   env:
+    #     VERSION: ${{steps.semantic_version.outputs.version}}
+    #   run: |
+    #     docker push smartiumtech/docker-graphql:$VERSION
+    #     docker push smartiumtech/docker-graphql:latest
