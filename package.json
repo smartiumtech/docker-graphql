@@ -1,7 +1,7 @@
 {
-  "name": "todo",
+  "name": "GraphQL Frontend",
   "version": "1.1.1-rc-9",
-  "description": "GraphQL Frontend",
+  "description": "This is a GraphQL Frontend",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
