@@ -26,8 +26,10 @@ jobs:
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        VERSION: ${{steps.semantic_version.outputs.version}}
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+        echo "Version: $VERSION"
     - name: Build Docker Image
       env:
         VERSION: ${{steps.semantic_version.outputs.version}}
