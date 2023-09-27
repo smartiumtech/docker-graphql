@@ -18,8 +18,8 @@ jobs:
     - name: Git Semantic Version
       uses: PaulHatch/semantic-version@v4.0.3
       with:
-        major-pattern: "major:"
-        minor-pattern: "feature:"
+        major-pattern: "Major:"
+        minor-pattern: "Feature:"
         format: "${major}.${minor}.${patch}-prerelease${increment}"
       id: semantic_version
     - name: Docker Login
